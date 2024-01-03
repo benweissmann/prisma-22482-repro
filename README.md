@@ -1,0 +1,4 @@
+- `npm install`
+- `docker-compose up` (to start postgres)
+- `npx prisma migrate dev`
+- `npm start`

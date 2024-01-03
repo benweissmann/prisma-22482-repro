@@ -1,0 +1,17 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devpwd
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - 6001:5432
+    restart: unless-stopped
+
+volumes:
+  postgres:
+    external: false
